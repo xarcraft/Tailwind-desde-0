@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "indigoP-200": "#ead2ff",
+        "indigoP-900": "#5b148f",
+      },
+    },
   },
   plugins: [],
 };
