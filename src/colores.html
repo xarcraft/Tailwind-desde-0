@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Colores en Tailwind</title>
+  </head>
+  <body>
+    <!-- ----------------- COLORES ---------------------- -->
+    <!-- los colores se pueden ingresar directamente entre llaves cuadradas [] -->
+    <!-- Tambien dentro del archivo de tailwind.config.js podemos definir nuestras propias paletas de colores -->
+    <h1
+      class="text-3xl font-bold underline text-[#5b148f] bg-indigoP-200 text-center"
+    >
+      Iniciando con Tailwind
+    </h1>
+
+    <!-- Podemos modificar la opacidad simplemente usando el simbolo "/" seguido de la opacidad requerida -->
+    <h2 class="bg-blue-700/50 font-bold my-2">Primeros pasos</h2>
+
+    <!-- el margin en los ejes x automatico "mx-auto" solo funciona para los elementos de bloque asi que usando la utilidad "block" habilitamos esa caracteristica -->
+    <button
+      class="bg-indigo-500 hover:bg-indigo-800 text-white p-3 mx-auto rounded-lg w-24 block font-bold"
+    >
+      Like
+    </button>
+
+    <!-- Degradados en tailwinds "bg-gradient-to-r"-->
+    <!-- de un color especifico a blanco usamos la utilidad "from" -->
+    <!-- de dos colores usamos la utilidad "from" para el primer color y la utilidad "to" para el segundo-->
+    <!-- de tres colores usamos la utilidad "from" para el primer color, la utilidad "via" para el segundo y la utilidad "to" para el ultimo-->
+    <div class="bg-gradient-to-r from-indigo-800 mt-3 text-white">
+      Degradados
+    </div>
+
+    <div class="text-5xl font-extrabold text-center">
+      <span
+        class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-indigo-200"
+        >Texto degradado</span
+      >
+    </div>
+    <!-- ----------------- FIN COLORES ---------------------- -->
+
+    <a href="index.html" class="font-bold uppercase hover:text-indigo-600"> Volver </a>
+  </body>
+</html>

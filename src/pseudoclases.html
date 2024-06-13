@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Pseudoclases de tailwind</title>
+  </head>
+  <body class="p-4">
+    <!-- los pseudoelemento after y before sirven para dar un aspecto decorativo a un elemento-->
+
+    <!-- agregamos el aspecto de flecha al boton usando after -->
+    <button
+      class="bg-cyan-500 w-32 p-3 rounded-md after:content-[''] after:border-8 after:left-32 after:top-4 relative after:absolute after:border-l-cyan-500 after:border-transparent"
+    >
+      haz clic aquí
+    </button>
+
+    <br />
+
+    <!-- agregamos un rectangulo ligeramente desalineado a el span usando before -->
+    <blockquote
+      class="text-2xl font-semibold italic text-center text-slate-900"
+    >
+      Cuando te ves
+      <span
+        class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block"
+      >
+        <span class="relative text-white">molesto</span>
+      </span>
+      todo el tiempo, la gente piensa que estas ocupado.
+    </blockquote>
+    <br />
+    <!-- Podemos modificar el contenido de el placeholder de un campo input con la pseudoclase del mismo nombre -->
+    <input
+      class="border ml-2 px-2 placeholder:text-indigo-600 placeholder:italic mb-4"
+      type="text"
+      placeholder="Nombre"
+    />
+
+    <br />
+    <!-- podemos editar tambien los campos de tipo file directamente con el pseudoelemento file de tailwind -->
+    <input
+      type="file"
+      class="file:bg-indigo-200 file:border-0 file:rounded-lg file:text-white file:font-semibold file:px-3 hover:file:bg-violet-800"
+    />
+    <br />
+    <!-- la pseudoclase marker es utilizada para dar estilo a las listas -->
+    <ul class="list-disc ml-6 marker:text-red-500 marker:font-bold">
+      <li>Item</li>
+      <li>Item</li>
+      <li>Item</li>
+    </ul>
+    <br />
+    <!-- la pseudoclase selection nos permitira modificar la apariencia de una seleccion determinada trabajada tanto en fondo como en color del texto -->
+     <span class="font-bold">haz una selecccion a continuacion para ver la magia</span>
+    <p class="selection:bg-green-500 selection:text-red-400">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore
+      accusamus repellat blanditiis, minus natus eum, qui fugiat aspernatur
+      alias eos laborum tempore impedit vel exercitationem suscipit in nihil
+      expedita.
+    </p>
+    <br>
+    <p class="first-line:uppercase first-line:tracking-widest first-letter:text-4xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore
+      accusamus repellat blanditiis, minus natus eum, qui fugiat aspernatur
+      alias eos laborum tempore impedit vel exercitationem suscipit in nihil
+      expedita.
+    </p>
+
+    <a href="index.html" class="font-bold uppercase"> Volver </a>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Manejo de estados en Tailwind</title>
+  </head>
+  <body class="bg-indigo-400">
+    <form action="" class="bg-white w-80 mx-auto mt-8 rounded-lg p-6">
+      <!-- podemos modificar el foco del campo en cuestion invocando la utilidad focus:  y dandole el valor a convenir -->
+      <input
+        class="border border-gray-300 w-full px-3 py-2 mb-4 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-600"
+        type="text"
+        placeholder="Nombre"
+      />
+      <!-- para utilizar la caracteristica personalizada disable desde tailwind optamos por escribir disable: seguido de la cualidad a cambiar -->
+      <input
+        class="border border-gray-300 w-full px-3 py-2 mb-4 rounded-md disabled:bg-red-500"
+        type="email"
+        placeholder="Correo"
+        disabled
+      />
+      <input
+        class="border border-gray-300 w-full px-3 py-2 rounded-md focus:outline-none focus:ring-2 invalid:focus:ring-red-600 peer"
+        type="email"
+        placeholder="Confirmar correo"
+      />
+      <!-- podemos utilizar el atributo hidden para ocultar un campo en el html -->
+      <p class="text-red-600 hidden peer-invalid:block">
+        El correo no coincide
+      </p>
+
+      <input
+        class="border border-gray-300 w-full px-3 py-2 mt-4 mb-4 rounded-md"
+        type="password"
+        placeholder="Contraseña"
+      />
+      <!-- para utilizar la utilidad de hover solo debemos colocar la palabra hover: seguida de la cualidad a modificar -->
+      <input
+        class="bg-indigo-500 w-full py-2 text-white rounded-md cursor-pointer hover:bg-indigo-400"
+        type="submit"
+        value="Ingresar"
+      />
+    </form>
+    <a href="index.html" class="font-bold ml-20 uppercase"> Volver</a>
+  </body>
+</html>
